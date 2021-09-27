@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".MainActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <TextView
+        android:fontFamily="sans-serif-condensed-medium"
+        android:layout_margin="20dp"
+        android:textSize="15dp"
+        android:textAlignment="center"
+        android:id="@+id/note"
+        android:text="Note, the variable in equation must only be uncapitalized x, the function used  should be f'(x)"
+        android:layout_centerHorizontal="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:layout_below="@+id/note"
+            android:id="@+id/linear_content"
+            android:padding="20dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_margin="10dp"
+                android:weightSum="2"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:inputType="textCapCharacters"
+                    android:text="Enter Equation:"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+                <EditText
+                    android:id="@+id/equation"
+                    android:hint="Enter..."
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_margin="10dp"
+                android:weightSum="2"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="Enter X -1:"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+                <EditText
+                    android:inputType="numberDecimal"
+                    android:id="@+id/x0"
+                    android:hint="Enter X-1"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_margin="10dp"
+                android:weightSum="2"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="Enter X 0:"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+                <EditText
+                    android:inputType="numberDecimal"
+                    android:id="@+id/x1"
+                    android:hint="Enter X 0"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_margin="10dp"
+                android:weightSum="2"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="Enter no of Iterations:"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+                <EditText
+                    android:inputType="number"
+                    android:id="@+id/iterations"
+                    android:hint="Enter..."
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/submit"
+            android:text="Evaluate"
+            android:layout_centerInParent="true"
+            android:layout_below="@+id/linear_content"
+            android:layout_margin="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <ListView
+            android:id="@+id/list_view"
+            android:layout_below="@id/submit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </RelativeLayout>
